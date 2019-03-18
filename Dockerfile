@@ -15,7 +15,7 @@ RUN  yum -y install python36u python36u-libs python36u-devel python36u-pip pytho
 RUN yum -y install unixODBC unixODBC-devel gcc-c++ python-devel
 
 #RUN pip install setuptools
-RUN pip install pyodbc
+RUN pip3.6 install pyodbc
 RUN echo "root:Docker!" | chpasswd
 
 #USER 1001
