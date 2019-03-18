@@ -8,11 +8,9 @@ LABEL name="CentOS Base Image" \
     build-date="20170911"
 
 RUN  yum update -y  &&  yum install -y yum-utils && \
-     yum -nstall -y https://centos7.iuscommunity.org/ius-release.rpm
+     yum install -y https://centos7.iuscommunity.org/ius-release.rpm
      
-     
-#&& \
-#yum -y groupinstall development      
-#RUN  yum  -y install -y python36u python36u-libs python36u-devel python36u-pip
+RUN yum -y groupinstall "Development Tools"   
+RUN  yum -y install -y python36u python36u-libs python36u-devel python36u-pip
 
 CMD ["/bin/bash"]
