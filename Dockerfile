@@ -16,4 +16,5 @@ RUN  yum -y install -y python36u python36u-libs python36u-devel python36u-pip py
 #RUN pip install pyodbc
 RUN echo "root:Docker!" | chpasswd
 
-#CMD ["/bin/bash"]
+USER 1001
+CMD ["/bin/bash"]
