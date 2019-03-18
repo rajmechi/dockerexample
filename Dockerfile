@@ -6,9 +6,9 @@ LABEL name="CentOS Base Image" \
     license="GPLv2" \
     build-date="20170911"
 
-RUN yum update -y  && yum install -y yum-utils && \
-    yum install https://centos7.iuscommunity.org/ius-release.rpm && \
-    yum -y groupinstall development && \
-    yum -y install python36u
+RUN /bin/bash yum update -y  && /bin/bash yum install -y yum-utils && \
+    /bin/bash yum install https://centos7.iuscommunity.org/ius-release.rpm && \
+    /bin/bash yum -y groupinstall development && \
+    /bin/bash yum -y install python36u
 
 CMD ["/bin/bash"]
