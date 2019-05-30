@@ -10,13 +10,13 @@ LABEL name="CentOS Base Image" \
 RUN  yum update -y  &&  yum install -y yum-utils && \
      yum install -y https://centos7.iuscommunity.org/ius-release.rpm
      
-RUN yum -y groupinstall "Development Tools"   
-RUN  yum -y install python36u python36u-libs python36u-devel python36u-pip python-pip
-RUN yum -y install unixODBC unixODBC-devel gcc-c++ python-devel
+#RUN yum -y groupinstall "Development Tools"   
+#RUN  yum -y install python36u python36u-libs python36u-devel python36u-pip python-pip
+#RUN yum -y install unixODBC unixODBC-devel gcc-c++ python-devel
 
-#RUN pip install setuptools
-RUN pip3.6 install pyodbc
-RUN echo "root:Docker!" | chpasswd
+##RUN pip install setuptools
+#RUN pip3.6 install pyodbc
+#RUN echo "root:Docker!" | chpasswd
 
 #USER 1001
 #CMD ["/bin/bash"]
